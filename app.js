@@ -22,7 +22,7 @@ app.use(express.urlencoded({ extended: false }))
 // encapsulate res.cc middleware before router
 app.use(normalizedErrorResHandling)
 
-// encypted user info from jwt token, the value will be stored in req.auth
+// decode user info from jwt token, the value will be stored in req.auth
 // must register the middleware before router
 app.use(expressJWT
     .expressjwt({ secret: jwtConfig.secretKey, algorithms: ['HS256'] })
